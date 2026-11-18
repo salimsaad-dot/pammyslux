@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pammy's Lux · Body care in Kasoa</title>
+  <meta name="description" content="Body lotions, shower gels, body scrubs, facials, perfume oils and body oils. Order on WhatsApp, delivered in Kasoa.">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Pammy's Lux · Body care in Kasoa">
+  <meta property="og:description" content="Lotions, scrubs, shower gels, facials and perfume oils. Order on WhatsApp in a few taps.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/shop.js"></script>
+</head>
+<body>
+  <a class="skip" href="#shop">Skip to products</a>
+
+  <p class="preview-strip" id="previewStrip" hidden>Preview with <b>sample products and prices</b>. Pammy's own products are coming soon.</p>
+
+  <header class="header" id="header">
+    <div class="wrap header-in">
+      <a class="brand" href="#top" aria-label="Pammy's Lux home">Pammy's <em>Lux</em></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#shop">Shop</a>
+        <a href="#how">How to order</a>
+        <a href="#delivery">Delivery</a>
+      </nav>
+      <button class="bag-btn" id="bagBtn" type="button" aria-label="Open your bag, 0 items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Bag</span>
+        <span class="bag-count" id="bagCount" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-text">
+          <p class="eyebrow">Body care · Kasoa</p>
+          <h1>Soft skin.<br><em>Lasting</em> scent.</h1>
+          <p class="lede">Body lotions, scrubs, shower gels, facials, perfume oils and body oils. Pick what you love and send your order on WhatsApp in a few taps.</p>
+          <div class="hero-cta">
+            <a class="btn btn-dark" href="#shop">Shop now</a>
+            <a class="btn btn-line" href="#how">How it works</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="fade-img" src="images/hero.jpg" alt="Amber glass bottles of body oil and lotion on a wooden tray" width="1400" height="1867" fetchpriority="high">
+          <button class="pick" id="pick" type="button" hidden>
+            <img id="pickImg" src="" alt="">
+            <span><small>New in</small><b id="pickName"></b><i id="pickPrice"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop" aria-labelledby="shopTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="shopTitle">The shop</h2>
+          <p id="shopCount" class="muted"></p>
+        </div>
+        <div class="chips" id="chips" role="tablist" aria-label="Categories"></div>
+        <div class="grid" id="grid" aria-live="polite">
+          <p class="loading" id="loading">Loading products…</p>
+        </div>
+        <p class="load-err" id="loadErr" hidden>Couldn't load the products. Check your internet and <button type="button" id="retry">try again</button>.</p>
+      </div>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="howTitle">
+      <div class="wrap">
+        <h2 id="howTitle">How to order</h2>
+        <ol class="steps">
+          <li><b>Pick your products</b><span>Choose a size and scent, then add it to your bag.</span></li>
+          <li><b>Send on WhatsApp</b><span>Your bag becomes one tidy message. Just tap Send.</span></li>
+          <li><b>Pay and receive</b><span>Pammy confirms your order, delivery fee and how to pay.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="delivery" id="delivery" aria-labelledby="delTitle">
+      <div class="wrap delivery-in">
+        <img class="fade-img" src="images/about.jpg" alt="Woman in a white robe holding a jar of body cream" width="1000" height="1500" loading="lazy">
+        <div>
+          <p class="eyebrow">Delivery</p>
+          <h2 id="delTitle">Delivered to your door in Kasoa</h2>
+          <p>We deliver around Kasoa and nearby. The delivery fee depends on where you are, and Pammy tells you before you pay. You can also pick up.</p>
+          <p class="muted">Not sure what suits your skin? Ask on WhatsApp and get a recommendation.</p>
+          <div class="hero-cta">
+            <a class="btn btn-dark" id="askWa" href="#" target="_blank" rel="noopener">Ask on WhatsApp</a>
+            <a class="btn btn-line" id="tiktok" href="#" target="_blank" rel="noopener" hidden>See us on TikTok</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <p class="brand">Pammy's <em>Lux</em></p>
+      <p>© <span id="year"></span> Pammy's Lux · Kasoa, Ghana</p>
+      <p class="muted">Website by Salim Saad</p>
+    </div>
+  </footer>
+
+  <button class="float-bag" id="floatBag" type="button" hidden>
+    View bag · <span id="floatTotal"></span>
+  </button>
+
+  <!-- Product sheet -->
+  <dialog class="sheet" id="productSheet" aria-labelledby="pName">
+    <form method="dialog" class="sheet-in" id="productForm">
+      <button class="x" value="close" aria-label="Close" formnovalidate>×</button>
+      <div class="p-photo"><img id="pImg" src="" alt=""></div>
+      <div class="p-body">
+        <p class="eyebrow" id="pCat"></p>
+        <h3 id="pName"></h3>
+        <p class="p-desc" id="pDesc"></p>
+        <fieldset class="opt" id="pSizes"><legend>Size</legend><div class="pills" id="pSizeList"></div></fieldset>
+        <fieldset class="opt" id="pChoices"><legend id="pChoiceTitle">Scent</legend><div class="pills" id="pChoiceList"></div></fieldset>
+        <div class="p-buy" id="pBuy">
+          <div class="qty" aria-label="Quantity">
+            <button type="button" data-q="-1" aria-label="One less">−</button>
+            <output id="pQty">1</output>
+            <button type="button" data-q="1" aria-label="One more">+</button>
+          </div>
+          <button class="btn btn-dark grow" type="button" id="pAdd">Add to bag · <span id="pTotal"></span></button>
+        </div>
+        <div class="p-sold" id="pSold" hidden>
+          <p><b>Sold out for now.</b> Ask Pammy when it's back.</p>
+          <a class="btn btn-line" id="pAskWa" href="#" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Bag -->
+  <dialog class="drawer" id="bag" aria-labelledby="bagTitle">
+    <div class="drawer-in">
+      <div class="drawer-head">
+        <h3 id="bagTitle">Your bag</h3>
+        <button class="x" type="button" id="bagClose" aria-label="Close bag">×</button>
+      </div>
+      <div class="bag-empty" id="bagEmpty">
+        <p>Your bag is empty.</p>
+        <button class="btn btn-line" type="button" id="bagShop">Start shopping</button>
+      </div>
+      <ul class="bag-list" id="bagList"></ul>
+      <form class="checkout" id="checkout" novalidate>
+        <div class="sum"><span>Items</span><b id="bagTotal"></b></div>
+        <p class="muted small">Delivery fee is confirmed by Pammy on WhatsApp.</p>
+        <fieldset class="seg">
+          <legend>How do you want it?</legend>
+          <label><input type="radio" name="how" value="Delivery" checked> Delivery</label>
+          <label><input type="radio" name="how" value="Pick up"> Pick up</label>
+        </fieldset>
+        <label class="field">Your name<input id="cName" name="cName" autocomplete="name" maxlength="60"></label>
+        <label class="field" id="areaField">Delivery area and landmark<input id="cArea" name="cArea" maxlength="120" placeholder="e.g. Millennium City, near the mall"></label>
+        <label class="field">Note (optional)<textarea id="cNote" name="cNote" rows="2" maxlength="300"></textarea></label>
+        <p class="err" id="cErr" role="alert"></p>
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Send order on WhatsApp
+        </button>
+      </form>
+      <div class="sent" id="sent" hidden>
+        <p><b>WhatsApp has opened with your order.</b> Tap Send there, and Pammy will reply to confirm.</p>
+        <div class="sent-actions">
+          <button class="btn btn-dark" type="button" id="clearBag">Done, empty my bag</button>
+          <button class="btn btn-line" type="button" id="keepBag">Keep my bag</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
