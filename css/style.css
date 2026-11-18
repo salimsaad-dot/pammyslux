@@ -214,3 +214,8 @@ html:has(dialog[open]) { overflow: hidden; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .fade-img { opacity: 1; }
 }
+
+/* close button stays reachable while the sheet scrolls (phones) */
+.sheet-in > .x { position: sticky; top: 12px; display: grid; place-items: center; margin: 12px 12px -56px auto; }
+@media (min-width: 820px) { .sheet-in > .x { position: absolute; margin: 0; } }
+#pAdd { white-space: nowrap; padding: 0 16px; }

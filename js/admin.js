@@ -168,6 +168,7 @@ function openEditor(p = null) {
 }
 
 $("addBtn").addEventListener("click", () => openEditor());
+$("edForm").addEventListener("input", (e) => { e.target.classList.remove("invalid"); $("edErr").textContent = ""; });
 $("plist").addEventListener("click", (e) => {
   const b = e.target.closest("[data-edit]");
   if (b) openEditor(products.find((p) => p.id === b.dataset.edit));
