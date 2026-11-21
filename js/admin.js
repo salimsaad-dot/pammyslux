@@ -221,8 +221,8 @@ $("edDelete").addEventListener("click", async () => {
 /* ---------- Start: preview, or sign-in ---------- */
 $("previewStrip").hidden = LIVE;
 $("reset").addEventListener("click", async () => {
-  if (!confirm("Remove your changes and go back to the sample products?")) return;
-  resetPreview(); await reload(); toast("Back to the samples");
+  if (!confirm("Remove your changes and go back to the starting products?")) return;
+  resetPreview(); await reload(); toast("Back to the starting products");
 });
 
 $("signinForm").addEventListener("submit", async (e) => {

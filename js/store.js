@@ -47,7 +47,7 @@ export function cleanProduct(p) {
 }
 
 /* ---------- Preview store (localStorage) ---------- */
-const KEY = "pammy-preview-v1";
+const KEY = "pammy-preview-v2";
 function readPreview() {
   try {
     const saved = JSON.parse(localStorage.getItem(KEY));
