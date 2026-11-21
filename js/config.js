@@ -30,7 +30,7 @@ export const SHOP = {
   whatsapp: "233577428684",
   currency: "GH₵",
   area: "Kasoa",
-  tiktok: "", // TODO: Pammy's TikTok link, e.g. https://www.tiktok.com/@handle (empty = hidden)
+  tiktok: "https://www.tiktok.com/@pammyluxessentials8",
 };
 
 export const CATEGORIES = [

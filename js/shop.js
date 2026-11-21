@@ -185,7 +185,7 @@ export function orderText(lines, { name, how, area, note }) {
   out.push(how === "Delivery" ? `*Delivery to:* ${area}` : "*Pick up*");
   out.push(`*Name:* ${name}`);
   if (note) out.push(`*Note:* ${note}`);
-  out.push("", how === "Delivery" ? "Please confirm my order, the delivery fee and how to pay. Thank you!" : "Please confirm my order, how to pay and where to pick up. Thank you!");
+  out.push("", how === "Delivery" ? "Please confirm my order, the delivery fee and your MoMo details. Thank you!" : "Please confirm my order, your MoMo details and where to pick up. Thank you!");
   return out.join("\n");
 }
 
